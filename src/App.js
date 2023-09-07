@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import './assets/scss/style.scss';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import MainView from './view/HomeView';
@@ -11,18 +12,20 @@ import MainSection from './components/section/MainSection';
 import FooterSection from './components/section/FooterSection';
 
 const App = () => {
-  <BrowserRouter>
-    <HeaderSection />
-    <MainSection>
-      <Routes>
-        <Route path="/" element={< MainView />} />
-        <Route path="/video/:videold" element={<VideoView />} />
-        <Route path="/channel/:channelld" element={<ChannelView />} />
-        <Route path="/search/:searchld" element={<SearchView />} />
-      </Routes>
-    </MainSection>
-    <FooterSection />
-  </BrowserRouter>
+  return(
+    <BrowserRouter>
+      <HeaderSection />
+      <MainSection>
+        <Routes>
+          <Route path="/" element={< MainView />} />
+          <Route path="/video/:videold" element={<VideoView />} />
+          <Route path="/channel/:channelld" element={<ChannelView />} />
+          <Route path="/search/:searchTerm" element={<SearchView />} />
+        </Routes>
+      </MainSection>
+      <FooterSection />
+    </BrowserRouter>
+  )
 };
 
 export default App
