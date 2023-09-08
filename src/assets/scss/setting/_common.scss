@@ -1,8 +1,8 @@
 #main {
-    margin-top: 93px;
+    margin-top: 62px;
 
     @media (max-width: 800px) {
-        margin-top: 112px;
+        margin-top: 120px;
     }
 }
 
@@ -10,31 +10,33 @@
     display: flex;
     flex-wrap: wrap;
 
-    #aside {
+    #category {
         position: fixed;
-        top: 100px;
+        top: 90px;
         left: 0;
         width: 260px;
-        padding: 1.5rem;
+        overflow: auto;
     }
     #contents {
         width: calc(100% - 260px);
         margin-left: 260px;
-        padding: 1.5rem;
         overflow: hidden;
+        background-color: var(--black100);
     }
 
     @media (max-width: 1400px){
         flex-direction: column;
 
-        #aside {
+        #category {
+            position: relative;
+            top: 5px;
             width: 100%;
-            padding: 1.5rem 1.5rem 0 1.5rem;
+            min-height: auto;
         }
 
         #contents {
             width: 100%;
-            padding: 1.5rem;
+            margin-left: 0;
         }
     }
 }
@@ -56,7 +58,6 @@ section {
         }
     }
 }
-
 
 .thumb {
     border-radius: 10px;

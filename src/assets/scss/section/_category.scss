@@ -1,0 +1,48 @@
+#category {
+    border-right: 1px solid var(--black200);
+    min-height: 90vh;
+
+    ul {
+        li {
+            a {
+                position: relative;
+                display: block;
+                padding: 20px 30px;
+                font-size: 1rem;
+                line-height: 1;
+                text-indent: 20px;
+                color: #fff;
+
+                svg {
+                    position: absolute;
+                    top: 17px;
+                    left: 20px;
+                    width: 20px;
+                    height: 20px;
+                }
+
+                &:hover {
+                    background-color: var(--black200);
+                }
+            }
+
+            &.active a {
+                background-color: var(--black200);
+            }
+        }
+    }
+
+    @media (max-width: 1200px) {
+        ul {
+            li {
+                display: inline-block;
+
+                a {
+                    &:hover {
+                        background-color: var(--black200);
+                    }
+                }
+            }
+        }
+    }
+}
